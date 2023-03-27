@@ -1,8 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox")
-require("@nomiclabs/hardhat-waffle")
 require("dotenv").config()
 require("hardhat-deploy")
-require("@nomiclabs/hardhat-etherscan")
 
 GOERLI_URL = process.env.GOERLI_URL
 GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY
@@ -29,18 +27,18 @@ module.exports = {
             blockConfirmations: 1,
             url: "http://localhost:8545",
         },
-        goerli: {
-            chainId: 5,
-            url: GOERLI_URL,
-            accounts: [GOERLI_PRIVATE_KEY],
-        },
+        // goerli: {
+        //     chainId: 5,
+        //     url: GOERLI_URL,
+        //     accounts: [GOERLI_PRIVATE_KEY],
+        // },
     },
     namedAccounts: {
         deployer: {
             default: 0,
         },
         player: {
-            default: 0,
+            default: 1,
         },
     },
 }

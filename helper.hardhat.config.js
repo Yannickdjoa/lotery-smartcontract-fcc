@@ -6,6 +6,7 @@ const networkConfig = {
         interval: "60",
         entranceFee: ethers.utils.parseEther("0.1"),
         callbackGasLimit: "500000",
+        gasLane: "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15",
     },
     5: {
         name: "goerli",
@@ -17,7 +18,7 @@ const networkConfig = {
         entranceFee: ethers.utils.parseEther("0.1"),
     },
 }
-developmentChains = ["hardhat", "localhost"]
+const developmentChains = ["hardhat", "localhost"]
 VERIFICATION_BLOCK_CONFIRMATIONS = 6
 const DECIMALS = 8
 const INITIAL_ANSWER = 200000000000
